@@ -1,0 +1,54 @@
+@import '__'
+
+$headerHeight: 70px
+$navHeight: 25px
+
+header
+  background: mix($brand, black)
+  height: $headerHeight
+
+
+
+
+header .logo
+  font-size: 40px
+  color: white
+  padding: 0 10px
+  line-height: $headerHeight
+
+
+
+
+header nav
+  float: right
+  margin-top: ($headerHeight/2) - ($navHeight/2)
+
+  ul
+    font-size: 0
+
+  li
+    font-size: 16px
+    display: inline-block
+    margin: 0 10px
+    height: $navHeight
+    line-height: $navHeight
+  li a
+    display: block
+    padding: 0 10px
+    text-transform: uppercase
+
+  // The last link is "contact", so we call more attention to it
+  li:last-child a
+    color: $brand
+    border: 2px solid $brand
+    border-radius: 3px
+
+  a, a:visited
+    color: white
+  a.current, a:hover, a:active
+    color: $gray
+    text-decoration: none
+
+
+
+

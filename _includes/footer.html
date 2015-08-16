@@ -1,0 +1,41 @@
+
+
+<footer>
+  <div class="container">
+
+  <div class="row">
+
+    <div class="col-sm-4">
+      {% include office-info.html %}
+      <br/>
+      <p>{{ site.description }}</p>
+    </div>
+
+    <div class="col-sm-4">
+      <h3>Site Map</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        {% for link in site.pages %} {% if link.title %}
+        <li><a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a></li>
+        {% endif %} {% endfor %}
+      </ul>
+    </div>
+
+    <div class="col-sm-4">
+      <h3>Keep Connected</h3>
+      <ul>
+        {% for link in site.data.socialAccounts %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+
+    </div>
+
+
+
+  </div>
+
+  </div>
+
+
+</footer>
