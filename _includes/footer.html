@@ -5,20 +5,19 @@
 
   <div class="row">
 
-    <div class="col-sm-4">
+    <div class="col-sm-4 col-xs-6">
       <h4>Our Office</h4>
       {% include office-info.html %}
       <br/>
-      <p>{{ site.description }}</p>
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-4 col-xs-6">
       <h4>Site Map</h4>
       <ul><li><a href="/">Home</a></li></ul>
       {% include ul-site-pages.html %}
     </div>
 
-    <div class="col-sm-4">
+    <div class="col-sm-4 col-xs-12">
       <h4>Keep Connected</h4>
       <ul>
         {% for link in site.data.socialAccounts %}
