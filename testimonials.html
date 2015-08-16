@@ -1,0 +1,22 @@
+---
+layout: default
+title: Testimonials
+id: testies
+permalink: /testimonials/
+---
+
+
+<div class="tagline">
+  <div class="container"><div class="row"><div class="col-sm-10 col-sm-offset-1">
+    {% capture md %}{% include content/testimonials-intro.md %}{% endcapture %} {{ md | markdownify }}
+  </div></div></div>
+  <div class="downArrow">
+    <i class="icon icon-down"></i><!-- TODO: get asset -->
+  </div>
+</div>
+
+
+{% include section-markdownPrinter.html file='content/testimonials-twitter.md' %}
+
+{% include section-markdownPrinter.html file='content/testimonials-email.md' %}
+

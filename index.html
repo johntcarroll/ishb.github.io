@@ -1,13 +1,36 @@
 ---
 layout: default
-tagline: >
-  Our team brings the **expertise** of an **IT Executive** to any business.
-  Through technology initiatives, we **improve** our client’s day to day business operations
-  and meet strategically set **business goals.**
 ---
 
 
+<div class="tagline">
+  <div class="container"><div class="row"><div class="col-sm-10 col-sm-offset-1">
+        {% capture md %}{% include content/home-intro.md %}{% endcapture %} {{ md | markdownify }}
+        <a href="/contact" class="button lg noShadow">Contact Us</a>
+  </div></div></div>
+  <div class="downArrow">
+    <i class="icon icon-down"></i><!-- TODO: get asset -->
+  </div>
+</div>
 
 
+{% include section-markdownPrinter.html file='content/home-teaser-services.md' %}
+{% include section-markdownPrinter.html file='content/home-teaser-testimonials.md' %}
+
+<section class="text-center inverted">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10  col-sm-offset-1">
+
+        <h1>Want to work Together?</h1>
+        <p>asdf asdf as df asdf as fd</p>
+        <a href="/contact" class="button noShadow">Contact Us</a>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 
+{% include section-markdownPrinter.html file='content/home-teaser-about.md' %}
+{% include section-markdownPrinter.html file='content/home-teaser-teamList.md' %}

@@ -1,0 +1,13 @@
+
+<section class="text-center {{ className }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-centered">
+
+        {% capture md %}{% include {{ include.file }} %}{% endcapture %}
+        {{ md | markdownify }}
+
+      </div>
+    </div>
+  </div>
+</section>

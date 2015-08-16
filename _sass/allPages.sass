@@ -1,0 +1,20 @@
+@import '__'
+
+
+
+section
+  background: white
+  padding: 70px 0
+  +phone
+    padding: 40px 0
+
+section.light
+  background: white
+section.shaded,
+section:nth-child(odd)
+  background: $grayLight
+
+
+section.inverted
+  background: $brandDark
+  color: white
