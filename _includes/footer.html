@@ -6,13 +6,14 @@
   <div class="row">
 
     <div class="col-sm-4">
+      <h4>Our Office</h4>
       {% include office-info.html %}
       <br/>
       <p>{{ site.description }}</p>
     </div>
 
     <div class="col-sm-4">
-      <h3>Site Map</h3>
+      <h4>Site Map</h4>
       <ul>
         <li><a href="/">Home</a></li>
         {% for link in site.pages %} {% if link.title %}
@@ -22,7 +23,7 @@
     </div>
 
     <div class="col-sm-4">
-      <h3>Keep Connected</h3>
+      <h4>Keep Connected</h4>
       <ul>
         {% for link in site.data.socialAccounts %}
           <li><a href="{{ link.url }}">{{ link.title }}</a></li>

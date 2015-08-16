@@ -1,6 +1,24 @@
 
 
+@mixin transitionable($duration: .15s, $ease: ease-in-out)
+  -webkit-transition: all $duration $ease
+  -moz-transition: all $duration $ease
+  transition: all $duration $ease
 
+$sizePhone: 767px
+$sizeTablet: 992px
+
+@mixin phone
+  @media (max-width: $sizePhone)
+    @content
+
+@mixin tablet
+  @media (min-width: $sizePhone+1) and (max-width: $sizeTablet)
+    @content
+
+@mixin desktop
+  @media (min-width: $sizeTablet+1)
+    @content
 
 
 
