@@ -3,54 +3,69 @@ layout: default
 title: Contact
 id: contact
 permalink: /contact/
-tagline: Contact Us
-taglineJr: You can reach us any time, we're here for you.
 ---
 
 
+<div class="tagline">
+  <div class="container"><div class="row"><div class="col-sm-10 col-sm-offset-1">
+    {% capture md %}{% include content/contact-intro.md %}{% endcapture %} {{ md | markdownify }}
+  </div></div></div>
+  <div class="downArrow">
+    <i class="icon icon-down"></i><!-- TODO: get asset -->
+  </div>
+</div>
 
-<div class="container">
 
-  <div class="row">
-    <div class="col-sm-10 col-xs-12 col-centered">
-      <div class="row">
+<section>
 
-        <div class="col-xs-10 col-centered">
+  <div class="container">
 
-          <div class="row">
+    <div class="row">
+      <div class="col-sm-10 col-xs-12 col-centered">
+        <div class="row">
 
-            <div class="col-xs-12 col-sm-8">
-              <div class="row">
-                <input type="text" class="col-xs-12 col-sm-6"/>
-                <input type="text" class="col-xs-12 col-sm-6"/>
-                <input type="text" class="col-xs-12 col-sm-6"/>
-                <input type="text" class="col-xs-12 col-sm-6"/>
+          <div class="col-xs-10 col-centered">
 
-                <textarea name="comments" id="" cols="30" rows="10" class="col-xs-12"></textarea>
-              </div>
-              <div class="row">
-                <a href="#" class="button">Send</a>
-              </div>
-            </div>
+            <div class="row">
 
-            <div class="col-sm-4 hidden-xs">
-              <div class="row">
-                <div class="col-sm-12">
-                  <h3>Our Office</h3>
-                  {% include office-info.html %}
+              <div class="col-xs-12 col-sm-8">
+                <div class="row">
+                  <input type="text" placeholder="Name" class="col-xs-12 col-sm-6"/>
+                  <input type="text" placeholder="Email" class="col-xs-12 col-sm-6"/>
+                  <input type="text" placeholder="Phone Number" class="col-xs-12 col-sm-6"/>
+                  <input type="text" placeholder="Website" class="col-xs-12 col-sm-6"/>
+
+                  <textarea name="comments" id="" cols="30" rows="10" class="col-xs-12"></textarea>
+                </div>
+                <div class="row">
+                  <a href="#" class="button">Send</a>
                 </div>
               </div>
+
+              <div class="col-sm-4 hidden-xs inverted" style="position: absolute; top:0; right: 0; bottom: 0;">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h3>
+                      <i class="icon icon-location"></i> <!-- TODO: get asset -->
+                      Our Office
+                    </h3>
+                    {% include office-info.html %}
+                  </div>
+                </div>
+              </div>
+
+
+
             </div>
-
-
-
           </div>
+
+
         </div>
-
-
       </div>
     </div>
+
+
   </div>
 
+</section>
 
-</div>
