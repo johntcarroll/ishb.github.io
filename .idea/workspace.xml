@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="271501de-9b62-4f9e-a3ae-f706484b5a91" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_colorVars.sass" afterPath="$PROJECT_DIR$/_sass/_colorVars.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_utils.sass" afterPath="$PROJECT_DIR$/_sass/_utils.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact.html" afterPath="$PROJECT_DIR$/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="$PROJECT_DIR$/_includes/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/header.sass" afterPath="$PROJECT_DIR$/_sass/header.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/office-info.html" afterPath="$PROJECT_DIR$/_includes/office-info.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/footer.sass" afterPath="$PROJECT_DIR$/_sass/footer.sass" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/typography.sass" afterPath="$PROJECT_DIR$/_sass/typography.sass" />
     </list>
     <ignored path="ishb.github.io.iws" />
@@ -28,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="contact.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/contact.html">
+      <file leaf-file-name="typography.sass" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_sass/typography.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.69403976">
-              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.34437087">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,14 +60,14 @@
         <option value="$PROJECT_DIR$/css/all.scss" />
         <option value="$PROJECT_DIR$/_sass/buttons.sass" />
         <option value="$PROJECT_DIR$/_config.yml" />
-        <option value="$PROJECT_DIR$/_sass/footer.sass" />
         <option value="$PROJECT_DIR$/_sass/header.sass" />
         <option value="$PROJECT_DIR$/_sass/_colorVars.sass" />
         <option value="$PROJECT_DIR$/_sass/_utils.sass" />
-        <option value="$PROJECT_DIR$/_sass/typography.sass" />
         <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/_includes/office-info.html" />
         <option value="$PROJECT_DIR$/contact.html" />
+        <option value="$PROJECT_DIR$/_sass/footer.sass" />
+        <option value="$PROJECT_DIR$/_sass/typography.sass" />
       </list>
     </option>
   </component>
@@ -517,14 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/footer.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09933775">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.397351">
@@ -573,14 +560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/typography.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33774835">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_sass/_utils.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47682118">
@@ -591,8 +570,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69403976">
-          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.25695366">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/footer.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.119205296">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/typography.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34437087">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
