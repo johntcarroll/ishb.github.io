@@ -1,12 +1,19 @@
 # ishb.github.io
 
-ISHB public site
+This is the repo for the [public site](http://ishb.github.io/) of ISHB.
 
-http://ishb.github.io.
+It is hosted on github pages which is fast, free, and easy to deploy.
 
-https://help.github.com/articles/user-organization-and-project-pages/
+It uses Jekyll as a build tool, so it's ready to support a world-class blog with permalinks, xml feed, and more (but we don't need one yet).
 
-## Running
+## Adding/Editing Content
+
+Content is written in [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet), a safe version of text that supports headings and basic formatting like bold, bullet points, and italics.
+
+Anyone who can edit a text file can use it and update the site. You can edit any of the content in the folder [_includes/content](https://github.com/ishb/ishb.github.io/tree/master/_includes/content). Just edit, save, (commit), and viola! Your edit is live on the site.
+
+
+## Developing
 
 Dev mode
 
@@ -14,6 +21,7 @@ Dev mode
 
 Create deployment bundle
 
+    jekyll build
 
 
 ## Scriptable Steps for making a static site like this
@@ -23,12 +31,13 @@ Create deployment bundle
 3. `clone https://github.com/ORGNAME/ORGNAME.github.io.git`
 4. `cd ORGNAME.github.io.git`
 4. `jekyll new . --force` # force ignores the readme file that might already be there
-
+1. set the repo description to include a link to the deployment location
 
 ## Objectives
 
-- [ ] sass compilation
+- [x] sass compilation
 - [ ] live reload dev server
-- [ ] min-cat deployed version
-- [ ] `data` section
-- [ ] bootstrap
+- [x] min-cat deployed version
+- [x] `data` section
+- [x] bootstrap
+- [x] content section full of markdown
