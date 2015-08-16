@@ -14,12 +14,8 @@
 
     <div class="col-sm-4">
       <h4>Site Map</h4>
-      <ul>
-        <li><a href="/">Home</a></li>
-        {% for link in site.pages %} {% if link.title %}
-        <li><a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a></li>
-        {% endif %} {% endfor %}
-      </ul>
+      <ul><li><a href="/">Home</a></li></ul>
+      {% include ul-site-pages.html %}
     </div>
 
     <div class="col-sm-4">

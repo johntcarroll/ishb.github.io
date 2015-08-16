@@ -2,7 +2,6 @@
 
 $headerHeight: 70px
 $navHeight: 25px
-
 header
   background: $brandDark
   height: $headerHeight
@@ -32,23 +31,29 @@ header nav
     margin: 0 10px
     height: $navHeight
     line-height: $navHeight
-  li a
+  a
     display: block
     padding: 0 10px
     text-transform: uppercase
 
+  a, a:visited
+    color: white
+  a:hover, a:active
+    color: $gray
+    text-decoration: none
+
   // The last link is "contact", so we call more attention to it
-  li:last-child a
+  a.promote
     color: $brand
     border: 2px solid $brand
     border-radius: 3px
 
-  a, a:visited
-    color: white
-  a.current, a:hover, a:active
-    color: $gray
-    text-decoration: none
 
-
-
-
+// Current page
+.aboutPage    header nav a.about,
+.testiesPage  header nav a.testies,
+.servicesPage header nav a.services
+  color: $gray
+.contactPage  header nav a.contact
+  color: $gray
+  border-color: $gray

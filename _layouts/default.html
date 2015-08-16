@@ -3,9 +3,11 @@
 
   {% include meta-head.html %}
 
-  <body>
+  <body class="{{ page.id }}Page">
 
     {% include header.html %}
+
+    {% include tagline.html %}
 
     {{ content }}
 

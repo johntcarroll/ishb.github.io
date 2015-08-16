@@ -6,9 +6,11 @@
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "reset",
         "bootstrap/css/bootstrap.min.css",
         "typography",
         "buttons",
         "header",
-        "footer"
+        "footer",
+        "tagline"
 ;

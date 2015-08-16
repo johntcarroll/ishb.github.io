@@ -3,16 +3,7 @@
     <a class="logo" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     <nav>
-      <ul>
-        {% for link in site.pages %}
-          {% if link.title %}
-            <li>
-              <a class="{% if page.url == link.url %}current{% endif %}"
-                 href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+      {% include ul-site-pages.html %}
     </nav>
 
   </div>
