@@ -16,6 +16,10 @@ $sizeTablet: 992px
   @media (min-width: $sizePhone+1) and (max-width: $sizeTablet)
     @content
 
+@mixin tabletAndSmaller
+  @media (max-width: $sizeTablet)
+    @content
+
 @mixin desktop
   @media (min-width: $sizeTablet+1)
     @content

@@ -1,13 +1,31 @@
 <header>
 
-    <a class="logo" href="{{ site.baseurl }}/">
-      <img src="/gfx/ishb-logo.png" srcset="/gfx/ishb-logo@2x.png 2x" alt="{{ site.title }} logo" width="140"/>
+  <a class="logo" href="{{ site.baseurl }}/">
+    <img src="/gfx/ishb-logo.png"       class="hidden-xs"  srcset="/gfx/ishb-logo@2x.png 2x" alt="{{ site.title }} logo" width="140"/>
+    <img src="/gfx/ishb-logo-small.png" class="visible-xs-inline" srcset="/gfx/ishb-logo-small@2x.png 2x" alt="{{ site.title }} logo" width="80"/>
+  </a>
+
+  <!--<nav class="hidden-xs">-->
+  <nav id="Menu">
+    <a id="MenuTrigger" href="javascript:void(0)" class="button clear menu">
+      <i class="icon-menu"></i>
     </a>
-
-    <nav class="hidden-xs">
-      {% include ul-site-pages.html %}
-    </nav>
-
-  </div>
+    {% include ul-site-pages.html %}
+  </nav>
 
 </header>
+
+<script type="text/javascript">
+  // Handle the toggling of the menu. using :focus doesn't work because the click event doesn't propogate before the menu gets hidden
+  (function(){
+    var menuTrigger = document.getElementById("MenuTrigger");
+    var menu = document.getElementById("Menu");
+    menuTrigger.addEventListener("focus", function(){ menu.className = "open" });
+    menuTrigger.addEventListener("blur", function(){
+      // We remove this in a timeout because otherwise the nav gets hidden before the click on a nav item can propogate up
+      setTimeout(function(){
+        menu.className = ""
+      }, 100);
+    });
+  })()
+</script>

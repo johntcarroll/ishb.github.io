@@ -1,10 +1,38 @@
 @import '__'
 
 footer
-  background: $dark
   color: white
+  background: $dark url("../gfx/skyline-dark.jpg") no-repeat center center
+  background-position-y: 70%
+  background-size: cover
   padding: 70px 0
   +tablet
     padding: 50px 0
   +phone
     padding: 30px 0
+
+  h4
+    margin-bottom: 20px
+
+  p
+    margin-bottom: 10px
+
+  a, a:hover
+    color: white
+    text-decoration: none
+
+
+  .social
+    $size: 25px
+    a
+      line-height: $size
+    .icon
+      font-size: $size
+      margin-right: 7px
+
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    line-height: 1.9
