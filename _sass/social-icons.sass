@@ -1,0 +1,25 @@
+@import '__'
+
+
+.social-icons
+  $size: 25px
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+  a
+    line-height: $size
+    color: white
+  a:hover, a:active, a:focus
+    text-decoration: none
+  .icon
+    font-size: $size
+    margin-right: 7px
+  +phone
+    .icon
+      margin-right: 0
+    ul
+      text-align: center
+    li
+      display: inline-block
+      margin-right: 25px

@@ -4,19 +4,19 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-sm-3 col-xs-4 col-sm-offset-1">
+      <div class="col-sm-3 col-xs-4 col-sm-offset-1 col-xs-push-8 col-sm-push-0">
         <h4>Site Map</h4>
         <ul><li><a href="/">Home</a></li></ul>
         {% include ul-site-pages-subset.html %}
       </div>
 
-      <div class="col-sm-4 col-xs-8">
+      <div class="col-sm-4 col-xs-8 col-xs-pull-4 col-sm-pull-0">
         <h4>Our Office</h4>
         {% include office-info.html %}
         <br/>
       </div>
 
-      <div class="col-sm-4 col-xs-12 social">
+      <div class="col-sm-4 col-xs-12 social-icons">
         <h4 class="hidden-xs">Keep Connected</h4>
         <ul>
           {% for account in site.data.socialAccounts %}
