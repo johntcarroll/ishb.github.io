@@ -5,16 +5,41 @@
 // The large tagline "well" at the top of most pages
 .tagline
   position: relative
-  background: $brandDark
+  z-index: 200
+  background: $brandDark url("../gfx/skyline.jpg") no-repeat center center
+  background-position-y: 30%
+  background-size: cover
   color: white
   text-align: center
-  padding: 40px 0 80px 0
+  margin-top:  -($headerHeight)
+  padding-bottom: 80px
+  padding-top: $headerHeight
+  text-shadow: 1px 1px 2px $shade40
   +phone
-    padding: 20px 0 40px 0
+    padding-bottom: 40px
+    padding-top: $headerHeight
+
+  &.roomy
+    padding-bottom: 170px
+    padding-top: $headerHeight + 60px
+    +phone
+      padding-bottom: 30px
+      padding-top: $headerHeight + 20px
+
+  // A gradient shades down from the top
+  &:after
+    content: ""
+    +absolutelyFull
+    z-index: -1
+    background: -moz-linear-gradient(top,     rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%)
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%)
+    background: linear-gradient(to bottom,    rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%)
+
+
 
   // Large text
   h1
-    margin-bottom: 20px
+    margin-bottom: 10px
 
   // Small text
 
