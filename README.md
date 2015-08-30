@@ -4,7 +4,7 @@ This is the repo for the [public site](http://ishb.github.io/) of ISHB.
 
 It is hosted on github pages which is fast, free, and easy to deploy.
 
-It uses Jekyll as a build tool, so it's ready to support a world-class blog with permalinks, xml feed, and more (but we don't need one yet).
+It uses Jekyll so it's ready to support a world-class blog with permalinks, xml feed, and more.
 
 ## Adding/Editing Content
 
@@ -17,7 +17,7 @@ Anyone who can edit a text file can use it and update the site. You can edit any
 
 Dev mode
 
-    jekyll serve --watch # jekyll s -w
+    jekyll serve --watch
 
 Create deployment bundle
 
