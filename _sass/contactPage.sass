@@ -1,8 +1,75 @@
 @import '__'
 
 
+.contactPage .mainSection
+  background: $black10 url("../gfx/bg-map.jpg") no-repeat center center
+  background-size: cover
 
-.contactPage
-  .inverted
-    background: $brand
-    color: white
+// contains both dataEntry and infoPanel
+.contactPage .entryPanel
+  background: white
+  padding: 30px
+  border: 1px solid #959595
+  border-radius: $radiusLarge
+
+
+.contactPage .dataEntry
+  input
+    padding-left: 40px
+  textarea
+    resize: none
+  input, textarea
+    width: 100%
+    margin-bottom: 30px
+    +phone
+      margin-bottom: 10px
+  i
+    position: absolute
+    top: 10px
+    left: 25px
+    color: $gray
+  .button.lg
+    min-width: 130px
+
+  +tabletAndSmaller
+    input
+      padding-left: 25px
+    i
+      font-size: 18px
+      top: 6px
+      left: 20px
+    .button.lg
+      min-width: 100px
+
+
+
+
+
+.contactPage .inverted
+  background: $brand
+  color: white
+
+.contactPage .infoPanel
+  padding-top: 30px
+  padding-right: 3px
+  border-top-right-radius: $radiusLarge
+  border-bottom-right-radius: $radiusLarge
+  p+p
+    margin-top: 10px
+  .social-icons
+    .icon
+      font-size: 30px
+    li
+      display: inline-block
+      margin-right: 5px
+
+  .arrowToButton
+    $size: 25px
+    position: absolute
+    left: -($size - 1)
+    bottom: 30px // match container padding so it points at the button
+    height: 0
+    width: 0
+    border-top:     $size solid transparent
+    border-bottom:  $size solid transparent
+    border-right:   $size solid $brand
