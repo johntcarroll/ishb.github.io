@@ -1,0 +1,24 @@
+- id: andrew
+  name: Andrew
+  jobTitle: Partner
+  linkedIn: http://linkedin.com/in/simplgy
+  about: Curabitur interdum luctus elit, sit amet porttitor metus venenatis ut. Vivamus in dolor posuere, pharetra lorem in, bibendum ex.
+
+- id: john
+  name: John
+  jobTitle: Partner
+  linkedIn: http://linkedin.com/in/simplgy
+  about: Nulla ut tortor vitae leo rhoncus lobortis. Pellentesque id mollis metus. Curabitur imperdiet tortor eget fringilla mattis.
+
+- id: ryan
+  name: Ryan
+  jobTitle: Lead Architect
+  linkedIn: http://linkedin.com/in/simplgy
+  about: Morbi ultricies laoreet est, ac consequat nisi fermentum vestibulum. Pellentesque sit amet iaculis purus.
+
+- id: kenn
+  name: Kenn
+  jobTitle: Software Engineer
+  linkedIn: http://linkedin.com/in/simplgy
+  about: Aenean luctus, purus a luctus dapibus, justo turpis facilisis nisi, id pellentesque nibh lacus eget eros.
+

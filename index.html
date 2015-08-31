@@ -20,6 +20,8 @@ permalink: /
 <section class="text-center services">
   <div class="container">
 
+    <h2>Services</h2>
+
     <!-- In two rows so the images line up -->
     <div class="row hidden-xs">
       <div class="col-sm-4"><img src="/gfx/icn_executive.png" srcset="/gfx/icn_executive@2x.png 2x" /></div>
@@ -32,23 +34,24 @@ permalink: /
         <img class="visible-xs-inline" src="/gfx/icn_executive.png" srcset="/gfx/icn_executive@2x.png 2x" />
         {% capture md %}{% include content/services-executive-teaser.md %}{% endcapture %}{{ md | markdownify }}
         <a href="/services" class="button quiet">Learn More ></a>
+        <hr class="visible-xs" />
       </div>
       <div class="col-sm-4">
         <img class="visible-xs-inline" src="/gfx/icn_responsive.png" srcset="/gfx/icn_responsive@2x.png 2x" />
         {% capture md %}{% include content/services-executive-teaser.md %}{% endcapture %}{{ md | markdownify }}
         <a href="/services" class="button quiet">Learn More ></a>
+        <hr class="visible-xs" />
       </div>
       <div class="col-sm-4">
         <img class="visible-xs-inline" src="/gfx/icn_customweb.png" srcset="/gfx/icn_customweb@2x.png 2x" />
         {% capture md %}{% include content/services-custom-dev-teaser.md %}{% endcapture %}{{ md | markdownify }}
         <a href="/services" class="button quiet">Learn More ></a>
+        <hr class="visible-xs" />
       </div>
     </div>
 
   </div>
 </section>
-
-
 
 
 
@@ -72,4 +75,35 @@ permalink: /
 
 
 {% include section-markdownPrinter.html file='content/home-teaser-about.md' %}
-{% include section-markdownPrinter.html file='content/home-teaser-teamList.md' %}
+
+
+<section class="text-center team">
+  <div class="container">
+
+    <h2>The Team</h2>
+
+    <!-- In two rows so the images line up -->
+    <div class="row">
+      {% for person in site.data.team %}
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-xs-12">
+            <img src="/gfx/{{person.id}}.jpg" srcset="/gfx/{{person.id}}@2x.jpg 2x" alt="Photo of {{ person.name }}"/>
+          </div>
+        </div>
+        <div class="heading">
+        <h3>{{ person.name }}</h3>
+        <h4>{{ person.jobTitle }}</h4>
+        </div>
+        <a class="button clear sm" href="{{ person.linkedIn }}">
+          <i class="icon-linkedin"></i>
+        </a>
+        <p>
+          {{ person.about }}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
