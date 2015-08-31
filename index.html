@@ -1,5 +1,8 @@
 ---
 layout: default
+title: Home
+id: home
+permalink: /
 ---
 
 
@@ -12,17 +15,55 @@ layout: default
 </div>
 
 
-{% include section-markdownPrinter.html file='content/home-teaser-services.md' %}
+
+
+<section class="text-center services">
+  <div class="container">
+
+    <!-- In two rows so the images line up -->
+    <div class="row hidden-xs">
+      <div class="col-sm-4"><img src="/gfx/icn_executive.png" srcset="/gfx/icn_executive@2x.png 2x" /></div>
+      <div class="col-sm-4"><img src="/gfx/icn_responsive.png" srcset="/gfx/icn_responsive@2x.png 2x" /></div>
+      <div class="col-sm-4"><img src="/gfx/icn_customweb.png" srcset="/gfx/icn_customweb@2x.png 2x" /></div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4">
+        <img class="visible-xs-inline" src="/gfx/icn_executive.png" srcset="/gfx/icn_executive@2x.png 2x" />
+        {% capture md %}{% include content/services-executive-teaser.md %}{% endcapture %}{{ md | markdownify }}
+        <a href="/services" class="button quiet">Learn More ></a>
+      </div>
+      <div class="col-sm-4">
+        <img class="visible-xs-inline" src="/gfx/icn_responsive.png" srcset="/gfx/icn_responsive@2x.png 2x" />
+        {% capture md %}{% include content/services-executive-teaser.md %}{% endcapture %}{{ md | markdownify }}
+        <a href="/services" class="button quiet">Learn More ></a>
+      </div>
+      <div class="col-sm-4">
+        <img class="visible-xs-inline" src="/gfx/icn_customweb.png" srcset="/gfx/icn_customweb@2x.png 2x" />
+        {% capture md %}{% include content/services-custom-dev-teaser.md %}{% endcapture %}{{ md | markdownify }}
+        <a href="/services" class="button quiet">Learn More ></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
 {% include section-markdownPrinter.html file='content/home-teaser-testimonials.md' %}
 
-<section class="text-center inverted">
+
+
+<section class="text-center inverted contact">
   <div class="container">
     <div class="row">
       <div class="col-sm-10  col-sm-offset-1">
 
-        <h1>Want to work Together?</h1>
-        <p>asdf asdf as df asdf as fd</p>
-        <a href="/contact" class="button noShadow">Contact Us</a>
+        {% capture md %}{% include content/home-teaser-contact.md %}{% endcapture %}{{ md | markdownify }}
+        <a href="/contact" class="button lg noShadow">Contact Us</a>
 
       </div>
     </div>
