@@ -1,0 +1,36 @@
+---
+layout: default
+title: About Us
+id: about
+permalink: /about/
+---
+
+
+
+<div class="tagline">
+  <div class="container"><div class="row"><div class="col-sm-10 col-sm-offset-1">
+    {% capture md %}{% include content/about-intro.md %}{% endcapture %} {{ md | markdownify }}
+  </div></div></div>
+  <div class="downArrow"><i class="icon-arrow-down"></i></div>
+</div>
+
+
+
+{% for section in site.categories.about %}
+  <section class="text-center aboutUsSection">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-centered">
+
+          <h2>{{ section.title }}</h2>
+          {{ section.content }}
+          {% if section.imageName %}
+            <img src="/gfx/{{ section.imageName }}.png" srcset="/gfx/{{ section.imageName }}@2x.png 2x" alt="Graphic for {{ section.title }} section"/>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endfor %}
+
+
