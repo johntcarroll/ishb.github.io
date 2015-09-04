@@ -63,5 +63,17 @@
     border-radius: 50%
     background-color: $brand
     border: 4px solid white
-    .icon
+    [class^="icon-"], [class*=" icon-"]
       line-height: $size - 4
+
+    +phone
+      $size: 22px
+      border-width: 2px
+      margin-left: -($size/2)
+      padding-left: 0
+      bottom: -($size/2)
+      width: $size
+      height: $size
+      [class^="icon-"], [class*=" icon-"]
+        font-size: $size - 8
+        line-height: $size - 2
