@@ -16,6 +16,11 @@
 
         <br/>
         {{ section.content }}
+
+        {% if forloop.last != true %}
+          <hr class="visible-xs" />
+        {% endif %}
+
       </div>
     </div>
   </div>
