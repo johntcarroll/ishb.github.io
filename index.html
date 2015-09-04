@@ -46,7 +46,6 @@ permalink: /
         <img class="visible-xs-inline" src="/gfx/icn_customweb.png" srcset="/gfx/icn_customweb@2x.png 2x" />
         {% capture md %}{% include content/services-custom-dev-teaser.md %}{% endcapture %}{{ md | markdownify }}
         <a href="/services" class="button quiet">Learn More ></a>
-        <hr class="visible-xs" />
       </div>
     </div>
 
@@ -65,7 +64,7 @@ permalink: /
 <section class="text-center inverted contact">
   <div class="container">
     <div class="row">
-      <div class="col-sm-10  col-sm-offset-1">
+      <div class="col-md-10 col-md-offset-1">
 
         {% capture md %}{% include content/home-teaser-contact.md %}{% endcapture %}{{ md | markdownify }}
         <a href="/contact" class="button lg noShadow">Contact Us</a>
@@ -79,7 +78,7 @@ permalink: /
 <section class="text-center light">
   <h2>About Us</h2>
   {% for section in site.categories.about %}
-  {% include section-aboutUs.html %}
+    {% include section-aboutUs.html %}
   {% endfor %}
 </section>
 
@@ -89,31 +88,35 @@ permalink: /
 
 <section class="text-center team dark">
   <div class="container">
-
-    <h2>The Team</h2>
-
-    <!-- In two rows so the images line up -->
     <div class="row">
-      {% for person in site.data.team %}
-      <div class="col-sm-6">
-        <div class="row">
-          <div class="col-xs-12">
-            <img src="/gfx/{{person.id}}.jpg" srcset="/gfx/{{person.id}}@2x.jpg 2x" alt="Photo of {{ person.name }}"/>
-          </div>
-        </div>
-        <div class="heading">
-        <h3>{{ person.name }}</h3>
-        <h4>{{ person.jobTitle }}</h4>
-        </div>
-        <a class="button clear sm" href="{{ person.linkedIn }}">
-          <i class="icon-linkedin"></i>
-        </a>
-        <p>
-          {{ person.about }}
-        </p>
-      </div>
-      {% endfor %}
-    </div>
+      <div class="col-md-10 col-md-offset-1">
 
+        <h2>The Team</h2>
+
+        <!-- In two rows so the images line up -->
+        <div class="row">
+          {% for person in site.data.team %}
+          <div class="col-sm-6">
+            <div class="row">
+              <div class="col-xs-12">
+                <img src="/gfx/{{person.id}}.jpg" srcset="/gfx/{{person.id}}@2x.jpg 2x" alt="Photo of {{ person.name }}"/>
+              </div>
+            </div>
+            <div class="heading">
+              <h3>{{ person.name }}</h3>
+              <h4>{{ person.jobTitle }}</h4>
+            </div>
+            <a class="button clear sm" href="{{ person.linkedIn }}">
+              <i class="icon-linkedin"></i>
+            </a>
+            <p>
+              {{ person.about }}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>

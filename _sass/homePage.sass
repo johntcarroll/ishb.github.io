@@ -3,10 +3,8 @@
 
 .homePage
 
-  section h1, section h2, section h3
-    margin-bottom: 20px
   hr
-    margin: 40px 0
+    margin: 30px 0
     border-top: 1px solid $gray
 
   section.services
@@ -17,6 +15,9 @@
       margin-bottom: 20px
     .button
       margin-top: 20px
+    +phone
+      img
+        max-width: 70px
 
   section.contact
     background: $brandDark url("../gfx/laptop.jpg") no-repeat center center
@@ -26,6 +27,15 @@
     .button
       margin-top: 40px
       min-width: 200px
+
+    +phone
+      h1
+        margin-left:  -10px
+        margin-right: -10px
+        font-size: 26px
+      .button
+        margin-top: 20px
+        min-width: 0
 
 
   section.team
@@ -55,3 +65,4 @@
       padding-bottom: 40px
       +phone
         padding-bottom: 20px
+

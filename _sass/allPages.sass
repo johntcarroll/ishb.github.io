@@ -4,9 +4,14 @@
 
 section
   background: white
+  h1, h2, h3
+    margin-bottom: 20px
   padding: 70px 0
   +phone
     padding: 40px 0
+    h3
+      margin-bottom: 15px
+
 
 section.dark,
 section:nth-of-type(even)
@@ -19,7 +24,12 @@ section.inverted
   color: white
 
 
+
 .noPadding
   padding: 0 !important
-.transparent
-  background: transparent !important
+
+section > section,
+section > section:nth-of-type(even)
+  background: transparent
+section > section
+  padding: 50px 0

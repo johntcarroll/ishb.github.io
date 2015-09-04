@@ -1,8 +1,36 @@
 @import '__'
 
 
-.aboutUsSection
-  //list-style: none
-  //margin: 0
-  //padding: 0
 
+.aboutPage
+  +phone
+    section:nth-of-type(even)
+      background: white
+    section
+      padding: 0
+    section:first-of-type
+      margin-top: 40px
+    section:last-of-type
+      margin-bottom: 40px
+
+
+.aboutUsSection
+  line-height: 1.4
+
+
+section > .aboutUsSection:last-of-type
+  padding-bottom: 0
+
+
++phone
+  .aboutUsSection
+    text-align: center
+    h3
+      margin-left:  -10px
+      margin-right: -10px
+    img
+      max-width: 90px
+      margin-bottom: 20px
+
+  section > .aboutUsSection
+    padding: 0
