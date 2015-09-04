@@ -54,10 +54,12 @@ permalink: /
 </section>
 
 
-
-
-{% include section-markdownPrinter.html file='content/home-teaser-testimonials.md' %}
-
+<section class="text-center">
+  <h2>Success Stories of Our Clients</h2>
+  {% for section in site.categories.testimonials %}
+    {% include section-testimonial.html %}
+  {% endfor %}
+</section>
 
 
 <section class="text-center inverted contact">
@@ -74,10 +76,18 @@ permalink: /
 </section>
 
 
-{% include section-markdownPrinter.html file='content/home-teaser-about.md' %}
+<section class="text-center light">
+  <h2>About Us</h2>
+  {% for section in site.categories.about %}
+  {% include section-aboutUs.html %}
+  {% endfor %}
+</section>
 
 
-<section class="text-center team">
+
+
+
+<section class="text-center team dark">
   <div class="container">
 
     <h2>The Team</h2>
