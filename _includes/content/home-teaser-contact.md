@@ -1,4 +1,4 @@
-# Want to work Together?
+# Want to Work Together?
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dictum auctor hendrerit.
 Interdum et malesuada fames ac ante ipsum primis in faucibus.

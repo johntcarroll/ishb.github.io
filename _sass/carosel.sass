@@ -1,0 +1,144 @@
+@import '__'
+
+// DOM Structure:
+// .carosel.container > .viewport > ul > li
+
+//.carosel, .carosel .viewport, .carosel ul
+//  background: $shade10
+
+
+
+.carosel
+  position: relative
+
+  // Window into the world which hides overflow
+.carosel .viewport
+  position: relative
+  overflow: hidden
+  min-height: 200px
+  margin: 0 40px
+  +phone
+    margin: 0
+
+  // The full width of all the carosel items together
+  ul
+    +transitionable()
+    white-space: nowrap
+    font-size: 0
+    margin: 0
+    padding: 0
+
+  // A single Carosel item
+  li
+    font-size: 18px
+    display: inline-block
+    float: none
+    min-height: 200px
+    white-space: normal
+    +phone
+      padding: 0
+
+
+
+
+.carosel .bubble, .carosel .bubble.testimonialsSection
+  position: relative
+  margin-bottom: 80px // room for the arrow and avatar
+  background: white
+  border: 2px solid $black20
+  border-radius: $radiusLarge
+  padding: 10px 20px
+  text-align: left
+  +phone
+    margin-top: 0
+  a
+    word-wrap: break-word
+
+  .arrow
+    $size: 20px
+    position: absolute
+    left: 50%
+    margin-left: -($size)
+    bottom: -($size) // match container padding so it points at the button
+    height: 0
+    width: 0
+    border-top:     $size solid $black20
+    border-left:    $size solid transparent
+    border-right:   $size solid transparent
+    &:after
+      position: absolute
+      content: ""
+      top: -($size) - 2
+      left: -($size)
+      height: 0
+      width: 0
+      border-top:     $size solid white
+      border-left:    $size solid transparent
+      border-right:   $size solid transparent
+
+
+
+.carosel .avatar
+  $size: 50px
+  position: absolute
+  bottom: -($size + 25)
+  left: 50%
+  margin-left: -($size / 2)
+  width: $size
+  height: $size
+  border-radius: 50%
+  box-shadow: 0 0 0 2px $shade30
+  background: $black10
+  background-size: cover
+
+.carosel .pager.button
+  position: absolute
+  top: 35%
+  background: $grayLight
+  font-size: 40px
+  line-height: 43px
+  +phone
+    width: 25px !important
+    min-width: 25px !important
+    height: 25px
+    font-size: 20px
+    line-height: 22px
+    top: auto
+    bottom: -3px
+  &:hover
+    background: white
+  &.left
+    left: 3px
+    +phone
+      left: 15px
+  &.right
+    right: 3px
+    +phone
+      right: 15px
+
+.carosel .pageIndicator
+  margin: 0
+  padding: 0
+  text-align: center
+  list-style: none
+  font-size: 0
+  margin-top: 20px
+  li
+    display: inline-block
+    border: 3px solid $brand
+    border-radius: 50%
+    margin: 0 5px
+    &.current
+      background: $brand
+    $size: 20px
+    width: $size
+    height: $size
+    +phone
+      margin: 0 3px
+      border: 2px solid $brand
+      $size: 15px
+      width: $size
+      height: $size
+
+
+

@@ -32,16 +32,17 @@
   background: white
   color: $brand
   border-radius: 5px
-  box-shadow: inset 0 0 0 3px $brand, 3px 3px 0 0 $grayLight
+  box-shadow: inset 0 0 0 3px $brand, 3px 3px 0 0 $shade10
   &:active,
   &:focus,
   &:hover
-    box-shadow: inset 0 0 0 3px $brand, 3px 3px 0 0 $gray
+    box-shadow: inset 0 0 0 3px $brand, 3px 3px 0 0 $shade20
 
 .button.square
   width: 40px !important
   min-width: 40px !important
   padding: 0
+
 
 .button.sm
   $size: 30px
@@ -51,11 +52,11 @@
   line-height: $size
 
 .button.sm.quiet
-  box-shadow: inset 0 0 0 2px $brand, 3px 3px 0 0 $grayLight
+  box-shadow: inset 0 0 0 2px $brand, 3px 3px 0 0 $shade10
   &:active,
   &:focus,
   &:hover
-    box-shadow: inset 0 0 0 2px $brand, 3px 3px 0 0 $gray
+    box-shadow: inset 0 0 0 2px $brand, 3px 3px 0 0 $shade20
 
 .button.lg
   height: 50px
@@ -66,6 +67,16 @@
     line-height: 40px
     font-size: 18px
     padding: 0 15px
+
+.button.lg.square
+  width: 50px !important
+  min-width: 50px !important
+  +phone
+    height: 35px
+    line-height: 35px
+    width: 35px !important
+    min-width: 35px !important
+    padding: 0
 
 .button.clear
   background: transparent

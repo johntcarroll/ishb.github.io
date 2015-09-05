@@ -16,7 +16,7 @@ permalink: /
 
 
 
-
+{% comment %} -------------------------------------------------------------- Services -- {% endcomment %}
 <section class="text-center services">
   <div class="container">
 
@@ -53,14 +53,111 @@ permalink: /
 </section>
 
 
-<section class="text-center">
+
+{% comment %} -------------------------------------------------------------- Testimonials -- {% endcomment %}
+<section class="text-center testimonials">
   <h2>Success Stories of Our Clients</h2>
-  {% for section in site.categories.testimonials %}
-    {% include section-testimonial.html %}
-  {% endfor %}
+
+  <div class="carosel container">
+
+    <div class="viewport row">
+      <ul class="" id="Carosel-Canvas">
+        {% for section in site.categories.testimonials %}
+
+          {% assign zeroIdx   = forloop.index | minus: 1 %}
+          {% assign position  = zeroIdx | times: 100 %}
+
+          <li class="col-xs-12 col-sm-6">
+
+
+            <div class="testimonialsSection bubble">
+              <h3>
+                {{ section.title }}
+                <a class="button clear sm" href="{{ section.linkedIn }}">
+                  <i class="icon-linkedin"></i>
+                </a>
+              </h3>
+              <h4>{{ section.jobTitle }}</h4>
+              <!--<h4>{{ section.service }}</h4>-->
+              <p><a class="website" href="{{ section.website }}">{{ section.website }}</a></p>
+              <br/>
+              {{ section.content }}
+              <b class="arrow"></b>
+              <i class="avatar" style="background-image:url({{ section.avatarImg }})"></i>
+              <!--<img class="avatar" src=""/>-->
+            </div>
+
+
+          </li>
+
+        {% endfor %}
+      </ul>
+    </div>
+
+
+    <div class="row">
+      <ol class="col-xs-12 pageIndicator" id="Carosel-Indicator"></ol>
+    </div>
+
+    <a href="javascript:void(0)" class="pager button lg square quiet left"  id="Carosel-Left" > &lt; </a>
+    <a href="javascript:void(0)" class="pager button lg square quiet right" id="Carosel-Right"> &gt; </a>
+
+  </div>
+  <script type="text/javascript">
+    (function(){
+      var carosel = {
+        canvas:     document.getElementById("Carosel-Canvas"),
+        left:       document.getElementById("Carosel-Left"),
+        right:      document.getElementById("Carosel-Right"),
+        indicator:  document.getElementById("Carosel-Indicator"),
+        page: 0
+      };
+
+
+      // Measure DOM elements to determine how many carosel items fit per "page"
+      function getPageCount(){
+        var items    = carosel.canvas.children.length;
+        var itemSize = carosel.canvas.children[0].offsetWidth / carosel.canvas.offsetWidth;
+        var pageCount = Math.ceil(items * itemSize);
+        return pageCount
+      }
+
+      // The client is required to determine the page indicator count, since there is sometimes 2 per page and it depends on screen size
+      function buildPageIndicators(pageCount, currentPage) {
+        carosel.indicator.innerHTML = "";
+        for (var i=0; i<pageCount; i++) {
+          var li = document.createElement("li");
+          if (i === currentPage) { li.className = "current" }
+          carosel.indicator.appendChild(li)
+        }
+      }
+
+      // Given a page index, position the carosel and set the page indicator
+      var setPage = function(newPage) {
+        lastIdx = getPageCount() - 1;
+        newPage = newPage < 0 ? lastIdx : newPage; // Limit to by start and end boundaries
+        newPage = newPage > lastIdx ? 0 : newPage;
+        carosel.canvas.style.transform = "translateX(-"+ newPage * 100 +"%)";
+        carosel.page = newPage;
+        buildPageIndicators(getPageCount(), newPage);
+      };
+
+      carosel.left.addEventListener( "click", function(){ setPage(carosel.page - 1)});
+      carosel.right.addEventListener("click", function(){ setPage(carosel.page + 1)});
+
+      setPage(0)
+
+    })();
+  </script>
+
+
+
 </section>
 
 
+
+
+{% comment %} -------------------------------------------------------------- Contact -- {% endcomment %}
 <section class="text-center inverted contact">
   <div class="container">
     <div class="row">
@@ -75,6 +172,8 @@ permalink: /
 </section>
 
 
+
+{% comment %} -------------------------------------------------------------- About Us -- {% endcomment %}
 <section class="text-center light">
   <h2>About Us</h2>
   {% for section in site.categories.about %}
@@ -85,7 +184,7 @@ permalink: /
 
 
 
-
+{% comment %} -------------------------------------------------------------- Team -- {% endcomment %}
 <section class="text-center team dark">
   <div class="container">
     <div class="row">
