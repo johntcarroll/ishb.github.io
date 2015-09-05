@@ -56,7 +56,9 @@
       lastIdx = getPageCount() - 1;
       newPage = newPage < 0 ? lastIdx : newPage; // Limit to by start and end boundaries
       newPage = newPage > lastIdx ? 0 : newPage;
-      carosel.canvas.style.transform = "translateX(-"+ newPage * 100 +"%)";
+      var styleString = "translateX(-"+ newPage * 100 +"%)";
+      carosel.canvas.style.transform = styleString;
+      carosel.canvas.style.webkitTransform = styleString;
       carosel.page = newPage;
       buildPageIndicators(getPageCount(), newPage);
     };
