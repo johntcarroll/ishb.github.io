@@ -5,6 +5,7 @@ id: contact
 permalink: /contact/
 ---
 
+<div id='loader' style='display: none'></div>
 
 <div class="tagline" style="background-image: url('../gfx/laptop.jpg'); background-position-y: 70%">
   <div class="container"><div class="row"><div class="col-sm-10 col-sm-offset-1">
@@ -29,31 +30,33 @@ permalink: /contact/
             <div class="row">
 
               <!-- Left Side of Form -->
-              <form class="dataEntry col-xs-12 col-sm-8" action="http://api.ishb.io">
+              <form class="dataEntry col-xs-12 col-sm-8" id='contact-form'>
                 <div class="row">
 
                   <div class="col-xs-12 col-sm-6">
-                    <input type="text" type="text"  name="name"    tabindex="1" placeholder="Name"/>
+                    <input type="text" type="text"  name="name" id="name" class="form-input required" tabindex="1" placeholder="Name *"/>
                     <i class="icon-name"></i></div>
                   <div class="col-xs-12 col-sm-6">
-                    <input type="text" type="email" name="email"   tabindex="2" placeholder="Email"/>
+                    <input type="text" type="email" name="email" id="email" class="form-input required" tabindex="2" placeholder="Email *"/>
                     <i class="icon-email"></i></div>
                   <div class="col-xs-12 col-sm-6">
-                    <input type="text" type="tel"   name="phone"   tabindex="3" placeholder="Phone Number"/>
+                    <input type="text" type="tel"   name="phone" id="phone" class="form-input" tabindex="3" placeholder="Phone Number"/>
                     <i class="icon-phone"></i></div>
                   <div class="col-xs-12 col-sm-6">
-                    <input type="text" type="url"   name="website" tabindex="4" placeholder="Website"/>
+                    <input type="text" type="url"   name="website" id="website" class="form-input" tabindex="4" placeholder="Website"/>
                     <i class="icon-website"></i></div>
 
                   <div class="col-xs-12">
-                    <textarea name="comments" id="" cols="30" rows="10" tabindex="5"></textarea>
+                    <textarea name="comments" id="comments" class="form-input required" cols="30" rows="10" tabindex="5"></textarea>
                   </div>
 
                 </div>
 
                 <div class="row ">
-                  <div class="col-xs-4"> <button class="button lg" tabindex="6">Send</button> </div>
+                  <div class="col-xs-4"> <button class="button lg" tabindex="6" id='validate'>Send</button> </div>
                 </div>
+
+                <input type='hidden' name='ip-address' id='ip-address' value="">
 
               </form>
 
@@ -97,5 +100,51 @@ permalink: /contact/
 
   </div>
 
+  <script type='text/javascript' src='/js/contact-form.js'></script>
+  <script type='text/javascript' src='/js/get_ip_address.js'></script>
+  <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
 </section>
 
+{% include captcha_modal.html %}
+{% include confirm_modal.html %}
+
+<!-- Left this code in case there is an issue with the include -->
+<!-- <div class="modal fade" id="captcha-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Are you a person?</h4>
+      </div>
+      <div class="modal-body text-center" id='catpcha-body'>
+        <form id='captcha-form'>
+          <div class="g-recaptcha" data-sitekey="6LeZvg0TAAAAAFVIFPblYDdkglcd2icOyPxFbVMP"></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div class="left-footer">
+          <button type='button' class='btn btn-success' id='submit'>Send Message</button>
+        </div>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="confirm-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h2 class="modal-title" id="modal-title"></h2>
+      </div>
+      <div class="modal-body">
+        <p id='confirm-body'></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> -->
