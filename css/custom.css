@@ -1,0 +1,69 @@
+.success {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    outline: none;
+    border-color: #4DDB4D;
+    box-shadow: 0 0 10px #4DDB4D;
+}
+
+.failure {
+    border: 2px solid #dadada;
+    border-radius: 7px;
+    outline: none;
+    border-color: #FF8080;
+    box-shadow: 0 0 10px #FF8080;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.vertical-center {
+  min-height: 50%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 50vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+  max-width: 25%;
+}
+
+.fixed-modal {
+  height: 32em;
+  overflow-y: auto;
+}
+
+.left-footer {
+  float: left;
+}
+
+#loader{
+    background-color: #dadada;
+    z-index: 999999999;
+    opacity: 0.6;
+    background-image: url('images/ajax-loader.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
